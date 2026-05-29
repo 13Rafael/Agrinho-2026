@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <svg class="plant-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 3V21M12 10C14 8 18 8 19 11C16 12 13 11 12 10ZM12 14C10 12 6 12 5 15C8 16 11 15 12 14Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span>Agrinho2026</span>
+        </div>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#projeto">O Projeto</a>
+            <a href="#contato" class="btn-nav">Participar</a>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <div class="hero-content">
+            <h1>Agrinho2026</h1>
+            <p>Inovação, sustentabilidade e tecnologia transformando o futuro do nosso campo.</p>
+            <a href="#projeto" class="btn-primary">Explore o Projeto</a>
+        </div>
+        
+        <div class="hero-image">
+            <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-planta">
+                <path d="M70 140 L130 140 L120 180 L80 180 Z" fill="#2d3748" />
+                <path d="M100 140 Q100 80 110 30" stroke="#1b4332" stroke-width="4" stroke-linecap="round" />
+                <path d="M102 110 Q70 100 65 80 Q85 85 101 100" fill="#40916c" />
+                <path d="M104 125 Q135 115 140 95 Q120 100 103 115" fill="#52b788" />
+                <path d="M105 75 Q80 60 85 40 Q100 50 106 68" fill="#74c69d" />
+                <circle cx="110" cy="25" r="8" fill="#ffdd57" />
+            </svg>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Agrinho — Desenvolvido com 💚 para o GitHub</p>
+    </footer>
+
+</body>
+</html>
+/* Configurações Gerais e Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f5;
+    color: #1b4332; /* Verde bem escuro para os textos */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 10%;
+    background-color: #1b4332; /* Verde Escuro */
+    color: #ffffff;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffdd57; /* Amarelo */
+}
+
+.plant-icon {
+    width: 30px;
+    height: 30px;
+    stroke: #ffdd57;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffdd57;
+}
+
+.btn-nav {
+    background-color: #ffdd57;
+    color: #1b4332 !important;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-nav:hover {
+    background-color: #e6c54f;
+}
+
+/* Seção Principal (Hero) */
+.hero {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 50%, #ffdd57 100%);
+    color: white;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #ffdd57; /* Destaque em Amarelo */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: #f4f7f5;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #ffdd57;
+    color: #1b4332;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    background-color: #e6c54f;
+}
+
+/* Ilustração da Planta */
+.hero-image {
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.svg-planta {
+    width: 100%;
+    max-width: 320px;
+    filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.3));
+    animation: balanco 4s ease-in-out infinite alternate;
+}
+
+/* Animação suave para a planta parecer viva */
+@keyframes balanco {
+    0% { transform: rotate(-2deg); }
+    100% { transform: rotate(2deg); }
+}
+
+/* Rodapé */
+footer {
+    background-color: #112a1f;
+    color: #a3b18a;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Responsividade para Celulares */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 3rem 5%;
+        gap: 2rem;
+    }
+    .hero-content {
+        max-width: 100%;
+    }
+    .hero-image {
+        max-width: 60%;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+CSS
+/* Configurações Gerais e Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f5;
+    color: #1b4332; /* Verde bem escuro para os textos */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 10%;
+    background-color: #1b4332; /* Verde Escuro */
+    color: #ffffff;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffdd57; /* Amarelo */
+}
+
+.plant-icon {
+    width: 30px;
+    height: 30px;
+    stroke: #ffdd57;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffdd57;
+}
+
+.btn-nav {
+    background-color: #ffdd57;
+    color: #1b4332 !important;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-nav:hover {
+    background-color: #e6c54f;
+}
+
+/* Seção Principal (Hero) */
+.hero {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 50%, #ffdd57 100%);
+    color: white;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #ffdd57; /* Destaque em Amarelo */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: #f4f7f5;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #ffdd57;
+    color: #1b4332;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    background-color: #e6c54f;
+}
+
+/* Ilustração da Planta */
+.hero-image {
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.svg-planta {
+    width: 100%;
+    max-width: 320px;
+    filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.3));
+    animation: balanco 4s ease-in-out infinite alternate;
+}
+
+/* Animação suave para a planta parecer viva */
+@keyframes balanco {
+    0% { transform: rotate(-2deg); }
+    100% { transform: rotate(2deg); }
+}
+
+/* Rodapé */
+footer {
+    background-color: #112a1f;
+    color: #a3b18a;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Responsividade para Celulares */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 3rem 5%;
+        gap: 2rem;
+    }
+    .hero-content {
+        max-width: 100%;
+    }
+    .hero-image {
+        max-width: 60%;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
