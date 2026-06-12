@@ -19,83 +19,28 @@ HTML
     </header>
 
     <section class="hero" id="inicio">
-        <div class="hero-content">
+        <div class="hero-container">
             <h1>Agrinho 2026</h1>
-            <p>Conectando tecnologia, sustentabilidade e inovação para cultivar o futuro do nosso campo.</p>
-            <button class="btn-main">Explorar Projeto</button>
-        </div>
-        
-        <div class="plant-container">
-            <div class="plant leaf-left">🍃</div>
-            <div class="plant sprout-center">🌱</div>
-            <div class="plant leaf-right">🌿</div>
+            <p>Sustentabilidade, inovação e o futuro da agricultura conectados em um só lugar.</p>
+            
+            <div class="mini-plants-container">
+                <div class="plant-item bush">🌳</div>
+                <div class="plant-item sprout">🌱</div>
+                <div class="plant-item tree">🌲</div>
+            </div>
+
+            <button class="btn-main">Saber Mais</button>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Agrinho - Projeto Front-End para GitHub</p>
-    </footer>
-
-</body>
-
-Conversa com o Gemini
-Consulta: você é um programador e precisa criar um programação de front-end com o titulo ''Agrinho2026''. para um repositório da plataforma Github. Com paleta de cores de verde escuro ao amarelo, não necessariamente todas as tonalidades. O front-end deve conter também desenho ou imagem de plantas animadas.
-
-Com certeza! Vamos estruturar um front-end moderno, limpo e responsivo para o seu projeto Agrinho2026. Como você pediu um repositório para o GitHub, o ideal é criar uma estrutura padrão de HTML5 e CSS3 (com algumas animações nativas para dar vida às plantas).
-
-Aqui está o código completo. Você pode salvar o HTML como index.html e o CSS como style.css no seu repositório.
-
-📂 Estrutura de Arquivos
-Plaintext
-agrinho2026/
-├── index.html
-└── style.css
-🌐 1. Conteúdo Estrutural (index.html)
-HTML
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agrinho2026</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <header>
-        <div class="logo">Agrinho<span>2026</span></div>
-        <nav>
-            <a href="#inicio">Início</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#projeto">Projeto</a>
-        </nav>
-    </header>
-
-    <section class="hero" id="inicio">
-        <div class="hero-content">
-            <h1>Agrinho 2026</h1>
-            <p>Inovação, sustentabilidade e tecnologia no campo para as próximas gerações.</p>
-            <button class="btn-main">Conhecer Projeto</button>
-        </div>
-        
-        <div class="plant-container">
-            <div class="plant leaf-1">🍃</div>
-            <div class="plant sprout">🌱</div>
-            <div class="plant leaf-2">🌿</div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Agrinho Projeto - Desenvolvido para o GitHub</p>
+        <p>&copy; 2026 Agrinho - Código disponível no GitHub</p>
     </footer>
 
 </body>
 </html>
-🎨 2. Estilização e Animações (style.css)
-Este arquivo aplica a paleta de cores solicitada (do verde escuro ao amarelo) usando gradientes, e adiciona um efeito de balanço suave nas plantas para dar a sensação de animação.
-
 CSS
-/* Reset básico de página */
+/* Configurações Globais */
 * {
     margin: 0;
     padding: 0;
@@ -104,19 +49,18 @@ CSS
 }
 
 body {
-    background-color: #f7f9f6;
-    color: #1b331e; /* Verde bem escuro para textos */
+    background-color: #f4f6f4;
+    color: #071c0e; /* Texto em verde quase preto para contraste */
     overflow-x: hidden;
 }
 
-/* Cabeçalho */
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 8%;
-    background-color: #0b2412; /* Verde Escuro */
-    color: #f4d03f; /* Amarelo */
+    background-color: #071c0e; /* Verde bem escuro */
 }
 
 header .logo {
@@ -126,7 +70,7 @@ header .logo {
 }
 
 header .logo span {
-    color: #f4d03f;
+    color: #f1c40f; /* Amarelo vivo no ano */
 }
 
 header nav a {
@@ -137,365 +81,123 @@ header nav a {
 }
 
 header nav a:hover {
-    color: #f4d03f;
-}
-
-/* Seção Hero (Principal) com Gradiente */
-.hero {
-    min-height: 85vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 8%;
-    /* Gradiente do Verde Escuro passando pelo Verde Folha até o Amarelo Queimado */
-    background: linear-gradient(135deg, #0b2412 0%, #1e562c 50%, #d4ac0d 100%);
-    color: #ffffff;
-    position: relative;
-}
-
-.hero-content {
-    max-width: 500px;
-    z-index: 2;
-}
-
-.hero-content h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    color: #f4d03f;
-}
-
-.hero-content p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    color: #e2ecc8;
-}
-
-.btn-main {
-    background-color: #f4d03f;
-    color: #0b2412;
-    border: none;
-    padding: 12px 28px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: transform 0.2s, background-color 0.3s;
-}
-
-.btn-main:hover {
-    background-color: #f1c40f;
-    transform: scale(1.05);
-}
-
-/* Contêiner de Plantas Animadas */
-.plant-container {
-    display: flex;
-    gap: 30px;
-    align-items: flex-end;
-    font-size: 80px; /* Tamanho dos emojis/desenhos */
-    position: relative;
-    padding-bottom: 20px;
-    z-index: 2;
-}
-
-/* Classe base para a animação das plantas */
-.plant {
-    display: inline-block;
-    transform-origin: bottom center;
-    animation: sway 3s ease-in-out infinite alternate;
-}
-
-/* Variações de tempo para parecer mais natural */
-.leaf-1 {
-    animation-duration: 2.5s;
-}
-
-.sprout {
-    font-size: 100px; /* Destaque para o broto central */
-    animation-duration: 3.5s;
-}
-
-.leaf-2 {
-    animation-duration: 3s;
-}
-
-/* Animação que faz as plantas balançarem como se houvesse vento */
-@keyframes sway {
-    0% {
-        transform: rotate(-5deg);
-    }
-    100% {
-        transform: rotate(5deg);
-    }
-}
-
-/* Rodapé */
-footer {
-    background-color: #0b2412;
-    color: #7a9a7d;
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
-}
-
-/* Responsividade para celulares */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        padding-top: 50px;
-    }
-    .hero-content {
-        margin-bottom: 50px;
-    }
-    .plant-container {
-        font-size: 60px;
-    }
-    .sprout {
-        font-size: 80px;
-    }
-}
-🚀 Como subir para o GitHub?
-No seu computador, coloque os dois arquivos dentro de uma pasta chamada agrinho2026.
-
-Abra o terminal nessa pasta e use os comandos:
-
-Bash
-git init
-git add .
-git commit -m "feat: estrutura inicial do Agrinho2026 com animacoes"
-Crie um repositório no GitHub com o nome agrinho2026.
-
-Conecte o repositório local ao GitHub usando os comandos que a própria plataforma vai te mostrar (como git remote add origin...) e dê o git push.
-
-Dica extra: Vá em Settings > Pages no seu repositório do GitHub e ative o GitHub Pages apontando para a branch main. Assim, o seu site ficará online para qualquer pessoa acessar!
-
-Consulta: você é um programador e precisa criar um programação de front-end com o titulo ''Agrinho2026''. para um repositório da plataforma Github. Com paleta de cores de verde escuro ao amarelo, não necessariamente todas as tonalidades.
-
-Com certeza! Como desenvolvedor, vou estruturar um código de front-end moderno, limpo e responsivo para o seu projeto Agrinho2026.
-
-Esta versão utiliza a paleta de cores solicitada (do verde escuro ao amarelo) através de um gradiente fluido e traz elementos visuais de plantas nativas estilizadas em CSS, aplicando uma animação suave que simula o balanço do vento.
-
-Aqui está a estrutura pronta para você colocar no seu repositório do GitHub.
-
-📂 Estrutura de Arquivos
-Para o repositório, você precisará de apenas dois arquivos principais na raiz do projeto:
-
-Plaintext
-agrinho2026/
-├── index.html
-└── style.css
-🌐 1. Estrutura HTML (index.html)
-HTML
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agrinho2026</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <header>
-        <div class="logo">Agrinho<span>2026</span></div>
-        <nav>
-            <a href="#inicio">Início</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#projeto">Projeto</a>
-        </nav>
-    </header>
-
-    <section class="hero" id="inicio">
-        <div class="hero-content">
-            <h1>Agrinho 2026</h1>
-            <p>Conectando tecnologia, sustentabilidade e inovação para cultivar o futuro do nosso campo.</p>
-            <button class="btn-main">Explorar Projeto</button>
-        </div>
-        
-        <div class="plant-container">
-            <div class="plant leaf-left">🍃</div>
-            <div class="plant sprout-center">🌱</div>
-            <div class="plant leaf-right">🌿</div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Agrinho - Projeto Front-End para GitHub</p>
-    </footer>
-
-</body>
-</html>
-🎨 2. Estilização e Animações (style.css)
-Este arquivo define a identidade visual. O fundo utiliza um gradiente que vai do verde escuro ao amarelo, e a propriedade @keyframes cuida da animação orgânica das plantas.
-
-CSS
-/* Reset de Margens e Box Sizing */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-    background-color: #f4f7f5;
-    color: #0b2412;
-    overflow-x: hidden;
-}
-
-/* Configuração do Menu/Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 8%;
-    background-color: #0b2412; /* Verde Escuro */
-}
-
-header .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #ffffff;
-}
-
-header .logo span {
-    color: #f4d03f; /* Destaque Amarelo no ano */
-}
-
-header nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin-left: 24px;
-    transition: color 0.3s ease;
-}
-
-header nav a:hover {
-    color: #f4d03f;
+    color: #f1c40f;
 }
 
 /* Seção Hero com o Gradiente Solicitado */
 .hero {
     min-height: 85vh;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 8%;
-    /* Transição suave do Verde Escuro ao Amarelo */
-    background: linear-gradient(135deg, #0b2412 0%, #1e562c 45%, #f4d03f 100%);
+    text-align: center;
+    padding: 40px 20px;
+    /* Transição do Verde Escuro para o Amarelo Queimado/Folha */
+    background: linear-gradient(135deg, #071c0e 0%, #1b4d22 50%, #f39c12 100%);
     color: #ffffff;
-    position: relative;
 }
 
-.hero-content {
-    max-width: 550px;
-    z-index: 2;
+.hero-container {
+    max-width: 650px;
 }
 
-.hero-content h1 {
-    font-size: 52px;
+.hero-container h1 {
+    font-size: 56px;
+    color: #f1c40f; /* Amarelo */
     margin-bottom: 15px;
-    color: #f4d03f;
-    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-.hero-content p {
-    font-size: 18px;
+.hero-container p {
+    font-size: 20px;
     line-height: 1.6;
-    margin-bottom: 30px;
     color: #e2ecc8;
+    margin-bottom: 25px;
+}
+
+/* Container de Plantas Pequenas Abaixo do Texto */
+.mini-plants-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 25px;
+    margin-bottom: 35px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Caixa leve de fundo */
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+
+/* Estilização e Cores de Árvores para as Plantinhas */
+.plant-item {
+    font-size: 45px; /* Tamanho menor para plantas pequenas */
+    display: inline-block;
+    transition: transform 0.3s ease;
+    animation: pulse 3s infinite ease-in-out alternate;
+}
+
+/* Cores específicas simuladas nos filtros para tons de árvores (verde oliva, floresta) */
+.bush {
+    filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.2));
+    animation-delay: 0.2s;
+}
+
+.sprout {
+    font-size: 35px; /* Ainda menor por ser um broto */
+    animation-delay: 0.6s;
+}
+
+.tree {
+    animation-delay: 0.4s;
+}
+
+/* Animação de crescimento/pulso sutil */
+@keyframes pulse {
+    0% {
+        transform: scale(0.95) translateY(0);
+    }
+    100% {
+        transform: scale(1.05) translateY(-5px);
+    }
 }
 
 /* Botão de Ação */
 .btn-main {
-    background-color: #f4d03f;
-    color: #0b2412;
+    background-color: #f1c40f;
+    color: #071c0e;
     border: none;
-    padding: 14px 32px;
+    padding: 14px 35px;
     font-size: 16px;
     font-weight: bold;
-    border-radius: 30px;
+    border-radius: 25px;
     cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .btn-main:hover {
     background-color: #ffffff;
-    transform: translateY(-3px);
-}
-
-/* Elementos Visuais das Plantas */
-.plant-container {
-    display: flex;
-    align-items: flex-end;
-    gap: 20px;
-    font-size: 90px; /* Tamanho dos elementos visuais */
-    z-index: 2;
-    padding-bottom: 20px;
-}
-
-/* Base da Animação (Balanço Orgânico) */
-.plant {
-    display: inline-block;
-    transform-origin: bottom center; /* Fixa a base para o balanço ser no topo */
-    animation: sway 3.5s ease-in-out infinite alternate;
-}
-
-/* Ajustes finos de tempo para dar naturalidade (não balançarem juntas) */
-.leaf-left {
-    animation-duration: 2.8s;
-}
-
-.sprout-center {
-    font-size: 120px; /* Destaque para o broto principal */
-    animation-duration: 4s;
-}
-
-.leaf-right {
-    animation-duration: 3.2s;
-}
-
-/* Regra da Animação de Balanço */
-@keyframes sway {
-    0% {
-        transform: rotate(-6deg);
-    }
-    100% {
-        transform: rotate(6deg);
-    }
+    transform: translateY(-2px);
 }
 
 /* Rodapé */
 footer {
-    background-color: #0b2412;
+    background-color: #071c0e;
     color: #8fa893;
     text-align: center;
-    padding: 25px;
+    padding: 20px;
     font-size: 14px;
 }
 
-/* Responsividade para Dispositivos Móveis */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        padding: 60px 5%;
+/* Tela Responsiva (Celulares) */
+@media (max-width: 600px) {
+    .hero-container h1 {
+        font-size: 40px;
     }
-    
-    .hero-content {
-        margin-bottom: 40px;
+    .hero-container p {
+        font-size: 16px;
     }
-
-    .plant-container {
-        font-size: 70px;
-    }
-    
-    .sprout-center {
-        font-size: 90px;
+    .plant-item {
+        font-size: 35px;
     }
 }
-</html>
