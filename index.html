@@ -1,3 +1,57 @@
+HTML
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Agrinho<span>2026</span></div>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#projeto">Projeto</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>Agrinho 2026</h1>
+            <p>Conectando tecnologia, sustentabilidade e inovação para cultivar o futuro do nosso campo.</p>
+            <button class="btn-main">Explorar Projeto</button>
+        </div>
+        
+        <div class="plant-container">
+            <div class="plant leaf-left">🍃</div>
+            <div class="plant sprout-center">🌱</div>
+            <div class="plant leaf-right">🌿</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Agrinho - Projeto Front-End para GitHub</p>
+    </footer>
+
+</body>
+
+Conversa com o Gemini
+Consulta: você é um programador e precisa criar um programação de front-end com o titulo ''Agrinho2026''. para um repositório da plataforma Github. Com paleta de cores de verde escuro ao amarelo, não necessariamente todas as tonalidades. O front-end deve conter também desenho ou imagem de plantas animadas.
+
+Com certeza! Vamos estruturar um front-end moderno, limpo e responsivo para o seu projeto Agrinho2026. Como você pediu um repositório para o GitHub, o ideal é criar uma estrutura padrão de HTML5 e CSS3 (com algumas animações nativas para dar vida às plantas).
+
+Aqui está o código completo. Você pode salvar o HTML como index.html e o CSS como style.css no seu repositório.
+
+📂 Estrutura de Arquivos
+Plaintext
+agrinho2026/
+├── index.html
+└── style.css
+🌐 1. Conteúdo Estrutural (index.html)
+HTML
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -37,6 +91,10 @@
 
 </body>
 </html>
+🎨 2. Estilização e Animações (style.css)
+Este arquivo aplica a paleta de cores solicitada (do verde escuro ao amarelo) usando gradientes, e adiciona um efeito de balanço suave nas plantas para dar a sensação de animação.
+
+CSS
 /* Reset básico de página */
 * {
     margin: 0;
@@ -199,3 +257,245 @@ footer {
         font-size: 80px;
     }
 }
+🚀 Como subir para o GitHub?
+No seu computador, coloque os dois arquivos dentro de uma pasta chamada agrinho2026.
+
+Abra o terminal nessa pasta e use os comandos:
+
+Bash
+git init
+git add .
+git commit -m "feat: estrutura inicial do Agrinho2026 com animacoes"
+Crie um repositório no GitHub com o nome agrinho2026.
+
+Conecte o repositório local ao GitHub usando os comandos que a própria plataforma vai te mostrar (como git remote add origin...) e dê o git push.
+
+Dica extra: Vá em Settings > Pages no seu repositório do GitHub e ative o GitHub Pages apontando para a branch main. Assim, o seu site ficará online para qualquer pessoa acessar!
+
+Consulta: você é um programador e precisa criar um programação de front-end com o titulo ''Agrinho2026''. para um repositório da plataforma Github. Com paleta de cores de verde escuro ao amarelo, não necessariamente todas as tonalidades.
+
+Com certeza! Como desenvolvedor, vou estruturar um código de front-end moderno, limpo e responsivo para o seu projeto Agrinho2026.
+
+Esta versão utiliza a paleta de cores solicitada (do verde escuro ao amarelo) através de um gradiente fluido e traz elementos visuais de plantas nativas estilizadas em CSS, aplicando uma animação suave que simula o balanço do vento.
+
+Aqui está a estrutura pronta para você colocar no seu repositório do GitHub.
+
+📂 Estrutura de Arquivos
+Para o repositório, você precisará de apenas dois arquivos principais na raiz do projeto:
+
+Plaintext
+agrinho2026/
+├── index.html
+└── style.css
+🌐 1. Estrutura HTML (index.html)
+HTML
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Agrinho<span>2026</span></div>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#projeto">Projeto</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>Agrinho 2026</h1>
+            <p>Conectando tecnologia, sustentabilidade e inovação para cultivar o futuro do nosso campo.</p>
+            <button class="btn-main">Explorar Projeto</button>
+        </div>
+        
+        <div class="plant-container">
+            <div class="plant leaf-left">🍃</div>
+            <div class="plant sprout-center">🌱</div>
+            <div class="plant leaf-right">🌿</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Agrinho - Projeto Front-End para GitHub</p>
+    </footer>
+
+</body>
+</html>
+🎨 2. Estilização e Animações (style.css)
+Este arquivo define a identidade visual. O fundo utiliza um gradiente que vai do verde escuro ao amarelo, e a propriedade @keyframes cuida da animação orgânica das plantas.
+
+CSS
+/* Reset de Margens e Box Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f5;
+    color: #0b2412;
+    overflow-x: hidden;
+}
+
+/* Configuração do Menu/Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #0b2412; /* Verde Escuro */
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+header .logo span {
+    color: #f4d03f; /* Destaque Amarelo no ano */
+}
+
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 24px;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #f4d03f;
+}
+
+/* Seção Hero com o Gradiente Solicitado */
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    /* Transição suave do Verde Escuro ao Amarelo */
+    background: linear-gradient(135deg, #0b2412 0%, #1e562c 45%, #f4d03f 100%);
+    color: #ffffff;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 550px;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 52px;
+    margin-bottom: 15px;
+    color: #f4d03f;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #e2ecc8;
+}
+
+/* Botão de Ação */
+.btn-main {
+    background-color: #f4d03f;
+    color: #0b2412;
+    border: none;
+    padding: 14px 32px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-main:hover {
+    background-color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* Elementos Visuais das Plantas */
+.plant-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    font-size: 90px; /* Tamanho dos elementos visuais */
+    z-index: 2;
+    padding-bottom: 20px;
+}
+
+/* Base da Animação (Balanço Orgânico) */
+.plant {
+    display: inline-block;
+    transform-origin: bottom center; /* Fixa a base para o balanço ser no topo */
+    animation: sway 3.5s ease-in-out infinite alternate;
+}
+
+/* Ajustes finos de tempo para dar naturalidade (não balançarem juntas) */
+.leaf-left {
+    animation-duration: 2.8s;
+}
+
+.sprout-center {
+    font-size: 120px; /* Destaque para o broto principal */
+    animation-duration: 4s;
+}
+
+.leaf-right {
+    animation-duration: 3.2s;
+}
+
+/* Regra da Animação de Balanço */
+@keyframes sway {
+    0% {
+        transform: rotate(-6deg);
+    }
+    100% {
+        transform: rotate(6deg);
+    }
+}
+
+/* Rodapé */
+footer {
+    background-color: #0b2412;
+    color: #8fa893;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+}
+
+/* Responsividade para Dispositivos Móveis */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 60px 5%;
+    }
+    
+    .hero-content {
+        margin-bottom: 40px;
+    }
+
+    .plant-container {
+        font-size: 70px;
+    }
+    
+    .sprout-center {
+        font-size: 90px;
+    }
+}
+</html>
