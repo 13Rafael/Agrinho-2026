@@ -1,4 +1,3 @@
-HTML
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -10,182 +9,231 @@ HTML
 <body>
 
     <header>
-        <div class="logo">Agrinho<span>2026</span></div>
-        <nav>
-            <a href="#inicio">Início</a>
+        <div class="header-right">
             <a href="#sobre">Sobre</a>
-            <a href="#projeto">Projeto</a>
-        </nav>
+            <a href="#github" class="btn-github">GitHub</a>
+        </div>
     </header>
 
-    <section class="hero" id="inicio">
-        <div class="hero-container">
-            <h1>Agrinho 2026</h1>
-            <p>Sustentabilidade, inovação e o futuro da agricultura conectados em um só lugar.</p>
-            
-            <div class="mini-plants-container">
-                <div class="plant-item bush">🌳</div>
-                <div class="plant-item sprout">🌱</div>
-                <div class="plant-item tree">🌲</div>
-            </div>
-
-            <button class="btn-main">Saber Mais</button>
+    <main class="search-container">
+        <div class="brand">
+            <h1 class="title">Agrinho<span>2026</span></h1>
+            <p class="subtitle">Cultivando inovação e sustentabilidade.</p>
         </div>
-    </section>
+
+        <div class="search-box">
+            <input type="text" placeholder="Explore o futuro do campo..." disabled>
+            <button class="icon-search">🔍</button>
+        </div>
+
+        <div class="mini-forest">
+            <div class="tree tree-1">🌲</div>
+            <div class="tree tree-2">🌳</div>
+            <div class="tree tree-3">🌲</div>
+            <div class="tree tree-4">🌳</div>
+        </div>
+
+        <div class="buttons-row">
+            <button class="btn-action">Pesquisar Projeto</button>
+            <button class="btn-action">Estou com Sorte 🌱</button>
+        </div>
+    </main>
 
     <footer>
-        <p>&copy; 2026 Agrinho - Código disponível no GitHub</p>
+        <p>&copy; 2026 Agrinho - Interface Minimalista para GitHub</p>
     </footer>
 
 </body>
-</html>
-CSS
-/* Configurações Globais */
+    /* Reset Geral */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 body {
-    background-color: #f4f6f4;
-    color: #071c0e; /* Texto em verde quase preto para contraste */
-    overflow-x: hidden;
+    background-color: #fdfdfd;
+    color: #0d2312; /* Verde Escuro quase preto */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
 }
 
-/* Header */
+/* Header Superior */
 header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 8%;
-    background-color: #071c0e; /* Verde bem escuro */
+    justify-content: flex-end;
+    padding: 15px 30px;
 }
 
-header .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #ffffff;
-}
-
-header .logo span {
-    color: #f1c40f; /* Amarelo vivo no ano */
-}
-
-header nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin-left: 20px;
-    transition: color 0.3s;
-}
-
-header nav a:hover {
-    color: #f1c40f;
-}
-
-/* Seção Hero com o Gradiente Solicitado */
-.hero {
-    min-height: 85vh;
+.header-right {
     display: flex;
-    justify-content: center;
     align-items: center;
+    gap: 20px;
+}
+
+.header-right a {
+    text-decoration: none;
+    color: #4a5d4e;
+    font-size: 14px;
+}
+
+.header-right a:hover {
+    text-decoration: underline;
+}
+
+.btn-github {
+    background-color: #1e4620; /* Verde Escuro */
+    color: #ffffff !important;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.btn-github:hover {
+    background-color: #122b14;
+    text-decoration: none !important;
+}
+
+/* Container Centralizado Estilo Google */
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 20px;
+    transform: translateY(-40px); /* Sobe um pouco para centralizar visualmente */
+}
+
+/* Título com Gradiente de Verde Escuro ao Amarelo */
+.brand {
     text-align: center;
-    padding: 40px 20px;
-    /* Transição do Verde Escuro para o Amarelo Queimado/Folha */
-    background: linear-gradient(135deg, #071c0e 0%, #1b4d22 50%, #f39c12 100%);
-    color: #ffffff;
-}
-
-.hero-container {
-    max-width: 650px;
-}
-
-.hero-container h1 {
-    font-size: 56px;
-    color: #f1c40f; /* Amarelo */
-    margin-bottom: 15px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-}
-
-.hero-container p {
-    font-size: 20px;
-    line-height: 1.6;
-    color: #e2ecc8;
     margin-bottom: 25px;
 }
 
-/* Container de Plantas Pequenas Abaixo do Texto */
-.mini-plants-container {
+.title {
+    font-size: 64px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    /* Aplicação do Gradiente no Texto */
+    background: linear-gradient(90deg, #0f3416 0%, #1e562c 50%, #f4d03f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #667a6b;
+    margin-top: 5px;
+}
+
+/* Barra de Pesquisa Fictícia */
+.search-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 580px;
+    border: 1px solid #dfe1e5;
+    padding: 12px 20px;
+    border-radius: 24px;
+    background-color: #ffffff;
+    transition: box-shadow 0.2s;
+    margin-bottom: 20px;
+}
+
+.search-box:hover {
+    box-shadow: 0 1px 6px rgba(32,33,36,0.28);
+    border-color: transparent;
+}
+
+.search-box input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+}
+
+.icon-search {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #70757a;
+    cursor: pointer;
+}
+
+/* Pequenas Árvores Animadas em Baixo do Texto/Busca */
+.mini-forest {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    gap: 25px;
-    margin-bottom: 35px;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.1); /* Caixa leve de fundo */
-    border-radius: 15px;
-    backdrop-filter: blur(5px);
-}
-
-/* Estilização e Cores de Árvores para as Plantinhas */
-.plant-item {
-    font-size: 45px; /* Tamanho menor para plantas pequenas */
-    display: inline-block;
-    transition: transform 0.3s ease;
-    animation: pulse 3s infinite ease-in-out alternate;
-}
-
-/* Cores específicas simuladas nos filtros para tons de árvores (verde oliva, floresta) */
-.bush {
-    filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.2));
-    animation-delay: 0.2s;
-}
-
-.sprout {
-    font-size: 35px; /* Ainda menor por ser um broto */
-    animation-delay: 0.6s;
+    gap: 15px;
+    height: 60px;
+    margin-bottom: 25px;
 }
 
 .tree {
-    animation-delay: 0.4s;
+    font-size: 30px; /* Árvores pequenas */
+    display: inline-block;
+    transform-origin: bottom center;
+    animation: sway 3s ease-in-out infinite alternate;
 }
 
-/* Animação de crescimento/pulso sutil */
-@keyframes pulse {
+/* Variações de tempo de animação para as árvores parecerem naturais */
+.tree-1 { animation-duration: 2.5s; animation-delay: 0.1s; }
+.tree-2 { animation-duration: 3.2s; animation-delay: 0.4s; font-size: 35px; } /* Um pouco maior */
+.tree-3 { animation-duration: 2.8s; animation-delay: 0.2s; }
+.tree-4 { animation-duration: 3.5s; animation-delay: 0.6s; font-size: 28px; }
+
+@keyframes sway {
     0% {
-        transform: scale(0.95) translateY(0);
+        transform: rotate(-3deg) scale(0.98);
     }
     100% {
-        transform: scale(1.05) translateY(-5px);
+        transform: rotate(3deg) scale(1.02);
     }
 }
 
-/* Botão de Ação */
-.btn-main {
-    background-color: #f1c40f;
-    color: #071c0e;
-    border: none;
-    padding: 14px 35px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 25px;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
+/* Botões de Ação */
+.buttons-row {
+    display: flex;
+    gap: 12px;
 }
 
-.btn-main:hover {
-    background-color: #ffffff;
-    transform: translateY(-2px);
-}
-
-/* Rodapé */
-footer {
-    background-color: #071c0e;
-    color: #8fa893;
-    text-align: center;
-    padding: 20px;
+.btn-action {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    color: #3c4043;
+    padding: 10px 16px;
     font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: border 0.1s, color 0.1s;
 }
+
+.btn-action:hover {
+    border: 1px solid #dadce0;
+    color: #202124;
+    background-color: #f8f9fa;
+}
+
+/* Rodapé Estilo Google */
+footer {
+    background-color: #f2f2f2;
+    border-top: 1px solid #e4e4e4;
+    padding: 15px 30px;
+    color: #70757a;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Responsividade Básica */
+@media (max-width: 600px) {
+    .title { font-size: 48px; }
+    .search-box { width: 90%; }
+}
+</html>
 
